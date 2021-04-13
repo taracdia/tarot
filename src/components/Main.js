@@ -31,7 +31,6 @@ function Main() {
 				pickedIndices.push(pickedIndex);
 			}
 		}
-		console.log(pickedIndices);
 		const pickedCards = pickedIndices.map(num => {
 			const pickedCard = cards[num];
 			//Allow each card to be reversed or not
@@ -43,23 +42,25 @@ function Main() {
 	return (
 		<Container>
 			<div className="notFooter">
-				<Row>
-					<Col>
-						<Form onSubmit={handleSubmit}>
-							<Form.Group controlId="formSpreadNumber">
-								<Form.Label>Cards in Your Spread:</Form.Label>
-								<Form.Control
-									type="number"
-									value={inputNumber}
-									onChange={handleChange}
-								/>
-								<Button variant="primary" type="submit">
-									Submit
-								</Button>
-							</Form.Group>
-						</Form>
-					</Col>
-				</Row>
+				<Form onSubmit={handleSubmit}>
+					<Row>
+						<Col className="leanRight">
+							<Form.Label>Cards in Your Spread:</Form.Label>
+						</Col>
+						<Col className="noPadding">
+							<Form.Control
+								type="number"
+								value={inputNumber}
+								onChange={handleChange}
+							/>
+						</Col>
+						<Col className="leanLeft noPadding">
+							<Button variant="primary" type="submit">
+								Submit
+							</Button>
+						</Col>
+					</Row>
+				</Form>
 				<Row>
 					{cardSpread.map(card => {
 						return <TarotCard key={card.name_short} card={card} />;

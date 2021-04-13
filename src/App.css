@@ -53,6 +53,7 @@ img.reversed {
 .container {
 	position: relative;
 	min-height: 100vh;
+	padding-top: 2.5rem;
 }
 
 .notFooter {
@@ -64,4 +65,16 @@ footer {
 	bottom: 0;
 	height: 2.5rem;
 	min-width: 100%;
+}
+
+.leanRight {
+	text-align: right;
+}
+
+.leanLeft {
+	text-align: left;
+}
+
+.noPadding {
+	padding: 0px !important;
 }
