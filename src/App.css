@@ -2,13 +2,13 @@
 	text-align: center;
 }
 
-img.flipped {
+img.reversed {
 	/* flip both */
 	transform: rotateX(180deg) rotateY(180deg);
 }
 
-.leanRight {
-	align-items: right;
+.clickable {
+	cursor: pointer;
 }
 
 .border {
@@ -48,4 +48,20 @@ img.flipped {
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+.container {
+	position: relative;
+	min-height: 100vh;
+}
+
+.notFooter {
+	padding-bottom: 2.5rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	height: 2.5rem;
+	min-width: 100%;
 }

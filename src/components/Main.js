@@ -42,28 +42,30 @@ function Main() {
 	};
 	return (
 		<Container>
-			<Row>
-				<Col>
-					<Form onSubmit={handleSubmit}>
-						<Form.Group controlId="formSpreadNumber">
-							<Form.Label>Cards in Your Spread:</Form.Label>
-							<Form.Control
-								type="number"
-								value={inputNumber}
-								onChange={handleChange}
-							/>
-							<Button variant="primary" type="submit">
-								Submit
-							</Button>
-						</Form.Group>
-					</Form>
-				</Col>
-			</Row>
-			<Row>
-				{cardSpread.map(card => {
-					return <TarotCard key={card.name_short} card={card} />;
-				})}
-			</Row>
+			<div className="notFooter">
+				<Row>
+					<Col>
+						<Form onSubmit={handleSubmit}>
+							<Form.Group controlId="formSpreadNumber">
+								<Form.Label>Cards in Your Spread:</Form.Label>
+								<Form.Control
+									type="number"
+									value={inputNumber}
+									onChange={handleChange}
+								/>
+								<Button variant="primary" type="submit">
+									Submit
+								</Button>
+							</Form.Group>
+						</Form>
+					</Col>
+				</Row>
+				<Row>
+					{cardSpread.map(card => {
+						return <TarotCard key={card.name_short} card={card} />;
+					})}
+				</Row>
+			</div>
 			<footer>
 				<p>
 					Thanks to <a href="https://github.com/ekelen/">Ekelen</a>'s{" "}
