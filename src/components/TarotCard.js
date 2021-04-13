@@ -1,5 +1,13 @@
+import { Col } from "react-bootstrap";
+
 function TarotCard({ card }) {
-	return <div className={TarotCard}>{card.name}</div>;
+	const imgSource = ``;
+	return (
+		<Col className={TarotCard}>
+			<h2>{card.name}</h2>
+			<img src={imgSource} />
+		</Col>
+	);
 }
 
 export default TarotCard;
