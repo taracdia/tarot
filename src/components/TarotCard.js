@@ -14,6 +14,8 @@ function TarotCard({ card }) {
 					<img
 						src={`/cardImages/${card.name_short}.jpg`}
 						alt={card.desc}
+						height={525}
+						width={300}
 						className={card.reverse ? "reversed" : ""}
 					/>
 				) : (
