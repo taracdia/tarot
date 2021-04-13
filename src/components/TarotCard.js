@@ -1,11 +1,14 @@
 import { Col } from "react-bootstrap";
-
 function TarotCard({ card }) {
-	const imgSource = `../cardImages/ar00.jpg`;
 	return (
 		<Col className={TarotCard}>
 			<h2>{card.name}</h2>
-			<img src={imgSource} alt={card.desc} />
+			<div>
+				<img
+					src={`/cardImages/${card.name_short}.jpg`}
+					alt={card.desc}
+				/>
+			</div>
 		</Col>
 	);
 }
