@@ -78,3 +78,7 @@ footer {
 .noPadding {
 	padding: 0px !important;
 }
+
+.hide {
+	display: none !important;
+}
