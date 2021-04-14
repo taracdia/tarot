@@ -46,8 +46,14 @@ function TarotCard({ card }) {
 		</ReactCardFlip>
 	);
 
+	const meaning = card.reverse ? (
+		<p>{card.meaning_rev}</p>
+	) : (
+		<p>{card.meaning_up}</p>
+	);
+
 	return (
-		<Col className={TarotCard}>
+		<Col>
 			<h2>{card.name}</h2>
 			{displayImage ? (
 				cardWithFlip
@@ -56,11 +62,7 @@ function TarotCard({ card }) {
 					{card.desc}
 				</p>
 			)}
-			{card.reverse ? (
-				<p>{card.meaning_rev}</p>
-			) : (
-				<p>{card.meaning_up}</p>
-			)}
+			{meaning}
 		</Col>
 	);
 }

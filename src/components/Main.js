@@ -55,9 +55,7 @@ function Main() {
 							/>
 						</Col>
 						<Col className="leanLeft noPadding">
-							<Button variant="primary" type="submit">
-								Submit
-							</Button>
+							<Button type="submit">Submit</Button>
 						</Col>
 					</Row>
 				</Form>
